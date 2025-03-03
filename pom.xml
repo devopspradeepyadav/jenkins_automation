@@ -9,7 +9,7 @@
     <groupId>club.dsoc3</groupId>
 
     <!-- Artifact ID, the name of the project or module -->
-    <artifactId>dsoc3-webapp</artifactId>
+    <artifactId>webappv1</artifactId>
 
     <!-- Packaging type, specifying the type of project being built. In this case, a web application (WAR file) -->
     <packaging>war</packaging>
@@ -18,7 +18,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <!-- Name of the project -->
-    <name>dsoc3-webapp Maven Webapp</name>
+    <name>webappv1 Maven Webapp</name>
 
     <!-- URL to the project's website or information page -->
     <url>http://maven.apache.org</url>
@@ -53,7 +53,7 @@
     <!-- Build section, configuring how the project should be built -->
     <build>
         <!-- Final name of the built artifact (WAR file) -->
-        <finalName>dsoc3-webapp</finalName>
+        <finalName>webappv1</finalName>
 
         <!-- Plugins section, specifying Maven plugins used during the build process -->
         <plugins>
