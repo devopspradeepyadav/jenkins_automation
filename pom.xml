@@ -1,0 +1,94 @@
+<!-- Root element of the POM file -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <!-- Version of the POM model being used -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Group ID of the project, typically the reverse domain name of the organization -->
+    <groupId>club.dsoc3</groupId>
+
+    <!-- Artifact ID, the name of the project or module -->
+    <artifactId>dsoc3-webapp</artifactId>
+
+    <!-- Packaging type, specifying the type of project being built. In this case, a web application (WAR file) -->
+    <packaging>war</packaging>
+
+    <!-- Version of the project. SNAPSHOT indicates a development version -->
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Name of the project -->
+    <name>dsoc3-webapp Maven Webapp</name>
+
+    <!-- URL to the project's website or information page -->
+    <url>http://maven.apache.org</url>
+
+    <!-- Dependencies section, listing external libraries and frameworks required by the project -->
+    <dependencies>
+        <!-- JUnit Jupiter API dependency for writing unit tests -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit Jupiter Engine dependency for executing unit tests -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Servlet API dependency, required for developing servlets -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Build section, configuring how the project should be built -->
+    <build>
+        <!-- Final name of the built artifact (WAR file) -->
+        <finalName>dsoc3-webapp</finalName>
+
+        <!-- Plugins section, specifying Maven plugins used during the build process -->
+        <plugins>
+            <!-- Maven Compiler Plugin, used to compile Java sources -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <!-- Source code compatibility version -->
+                    <source>1.8</source>
+                    <!-- Target JVM version -->
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Surefire Plugin, used to run unit tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <!-- Include pattern for test classes -->
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+            <!-- Maven War Plugin, used to build WAR files -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version> <!-- Updated to the latest version -->
+            </plugin>
+        </plugins>
+    </build>
+</project>
