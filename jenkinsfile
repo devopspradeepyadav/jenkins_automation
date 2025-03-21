@@ -1,0 +1,38 @@
+pipeline {
+agent any
+      stages{
+         stage("build") {
+                      stage{
+                            echo 'building the application'
+                            }
+                         }
+            }
+
+         stage("test") {
+                      stage{
+                            echo 'building the application'
+                            }
+                         }
+            }
+         stage("deploy") {
+                      stage{
+                            echo 'deploy the application'
+                            }
+                         }
+            }
+         stage("creating artifact") {
+                      stage{
+                            echo 'building and deploying the war file'
+                            }
+                         }
+            }
+
+         stage("build") {
+                      stage{
+                            echo 'building the application'
+                            }
+                         }
+            }
+
+
+}
