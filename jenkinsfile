@@ -1,38 +1,40 @@
 pipeline {
 agent any
-      stages{
-         stage("build") {
+      stages
+        
+            stage("build") {
                       stage{
                             echo 'building the application'
                             }
                          }
-            }
+        
 
-         {stage("test") {
+         
+            stage("test") {
                       stage{
                             echo 'building the application'
                             }
                          }
-            }
-               {stage("deploy") {
+         
+               
+                stage("deploy") {
                       stage{
                             echo 'deploy the application'
                             }
                          }
-            }
-         {stage("creating artifact") {
+         
+         
+            stage("creating artifact") {
                       stage{
                             echo 'building and deploying the war file'
                             }
                          }
-            }
+         
 
-         {stage("build") {
+         
+            stage("build") {
                       stage{
                             echo 'building the application'
                             }
                          }
-            }
-
-
 }
